@@ -2,6 +2,8 @@
 
 A full-stack web application built for the **Hack-o-Week (Semester III)** project. Students can manage tasks, plan study sessions, follow campus events, browse learning resources and send feedback — all from one responsive dashboard with light and dark themes.
 
+**Live demo:** https://campusconnect-bay-xi.vercel.app
+
 | Layer | Technology |
 | --- | --- |
 | Frontend | React 18, React Router 6, Vite, CSS Modules, Fetch API |
