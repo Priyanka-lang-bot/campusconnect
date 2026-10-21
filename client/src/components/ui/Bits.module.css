@@ -1,0 +1,85 @@
+.dateTile {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  width: 48px;
+  height: 52px;
+  border-radius: var(--radius);
+  line-height: 1.05;
+}
+
+.dateTile small {
+  font-size: 0.6875rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+}
+
+.dateTile strong {
+  font-size: 1.25rem;
+  font-weight: 700;
+}
+
+.accent {
+  background: var(--accent-softer);
+  color: var(--accent);
+}
+
+.lavender {
+  background: var(--accent-2-soft);
+  color: var(--accent-2);
+}
+
+.check {
+  display: grid;
+  place-items: center;
+  flex-shrink: 0;
+  width: 22px;
+  height: 22px;
+  padding: 0;
+  border: 2px solid var(--border-strong);
+  border-radius: 50%;
+  background: var(--bg-elevated);
+  color: transparent;
+  transition:
+    background-color var(--dur-fast) ease,
+    border-color var(--dur-fast) ease,
+    color var(--dur-fast) ease,
+    transform var(--dur-fast) var(--ease-out);
+}
+
+.check:hover {
+  border-color: var(--success);
+  color: color-mix(in srgb, var(--success) 50%, transparent);
+}
+
+.check:active {
+  transform: scale(0.88);
+}
+
+.checked,
+.checked:hover {
+  background: var(--success);
+  border-color: var(--success);
+  color: #fff;
+}
+
+.dot {
+  display: inline-block;
+  flex-shrink: 0;
+  border-radius: 50%;
+}
+
+.meta {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  color: var(--text-muted);
+  font-size: var(--fs-sm);
+}
+
+.meta svg {
+  color: var(--text-faint);
+}

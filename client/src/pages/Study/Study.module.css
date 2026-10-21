@@ -1,0 +1,362 @@
+.totals {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  margin-bottom: var(--sp-6);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  background: var(--bg-elevated);
+  overflow: hidden;
+}
+
+.totals > div {
+  display: flex;
+  flex-direction: column;
+  padding: var(--sp-4) var(--sp-5);
+}
+
+.totals > div + div {
+  border-left: 1px solid var(--border);
+}
+
+.totals strong {
+  font-size: var(--fs-lg);
+  font-weight: 700;
+}
+
+.totals span {
+  font-size: var(--fs-sm);
+  color: var(--text-muted);
+}
+
+.subjectGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: var(--sp-4);
+  margin-bottom: var(--sp-6);
+}
+
+.subjectCard {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: var(--sp-3);
+  padding: var(--card-pad);
+  padding-top: calc(var(--card-pad) + 4px);
+  border-radius: var(--radius-lg);
+  background: var(--bg-elevated);
+  border: 1px solid var(--border);
+  box-shadow: var(--shadow-sm);
+  color: var(--text);
+  overflow: hidden;
+  transition:
+    transform var(--dur) var(--ease-out),
+    box-shadow var(--dur) ease;
+}
+
+.subjectCard::before {
+  content: '';
+  position: absolute;
+  inset: 0 0 auto;
+  height: 4px;
+  background: var(--subject);
+}
+
+.subjectCard:hover {
+  text-decoration: none;
+  transform: translateY(-2px);
+  box-shadow: var(--shadow);
+}
+
+.subjectTop {
+  display: flex;
+  justify-content: space-between;
+  gap: var(--sp-3);
+}
+
+.subjectTop strong {
+  font-size: var(--fs-sm);
+}
+
+.subjectCode {
+  font-size: var(--fs-xs);
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--subject, var(--accent));
+}
+
+.subjectName {
+  font-size: var(--fs-md);
+  font-weight: 600;
+  margin-top: 2px;
+}
+
+.subjectHours {
+  font-size: var(--fs-sm);
+  color: var(--text-muted);
+}
+
+.subjectFoot {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: var(--sp-2);
+  margin-top: auto;
+  padding-top: var(--sp-3);
+  border-top: 1px solid var(--border);
+}
+
+.subjectNext {
+  margin-left: auto;
+  font-size: var(--fs-xs);
+  color: var(--text-muted);
+  font-weight: 500;
+}
+
+.columns {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: var(--sp-5);
+  align-items: start;
+}
+
+.sessionList {
+  display: grid;
+}
+
+.session {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--sp-3);
+  padding: var(--sp-3) 0;
+  border-bottom: 1px solid var(--border);
+}
+
+.session:last-child {
+  border-bottom: 0;
+}
+
+.session > button:first-child {
+  margin-top: 2px;
+}
+
+.sessionMain {
+  flex: 1;
+  min-width: 0;
+}
+
+.sessionTitle {
+  font-weight: 500;
+}
+
+.sessionDone .sessionTitle {
+  color: var(--text-muted);
+}
+
+.sessionMeta {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: var(--sp-1) var(--sp-3);
+  margin-top: 2px;
+  font-size: var(--fs-xs);
+  color: var(--text-muted);
+}
+
+.sessionSubject {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-weight: 600;
+}
+
+.sessionNotes {
+  margin-top: 4px;
+  font-size: var(--fs-xs);
+  color: var(--text-faint);
+  font-style: italic;
+}
+
+.deadlines {
+  display: grid;
+  gap: var(--sp-3);
+}
+
+.deadline {
+  display: flex;
+  align-items: center;
+  gap: var(--sp-3);
+}
+
+.deadlineText {
+  flex: 1;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+.deadlineText strong {
+  font-size: var(--fs-sm);
+  font-weight: 600;
+}
+
+.deadlineText span {
+  font-size: var(--fs-xs);
+  color: var(--text-muted);
+}
+
+.linkedTask {
+  display: flex;
+  align-items: center;
+  gap: var(--sp-3);
+  font-size: var(--fs-sm);
+}
+
+.linkedTask svg {
+  color: var(--text-faint);
+  flex-shrink: 0;
+}
+
+.linkedTask span:nth-child(2) {
+  flex: 1;
+  min-width: 0;
+}
+
+.struck {
+  text-decoration: line-through;
+  color: var(--text-faint);
+}
+
+.breadcrumb {
+  display: flex;
+  align-items: center;
+  gap: var(--sp-2);
+  margin-bottom: var(--sp-4);
+  font-size: var(--fs-sm);
+  color: var(--text-muted);
+}
+
+.breadcrumb svg {
+  color: var(--text-faint);
+}
+
+.detailHero {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: var(--sp-6);
+  padding: var(--sp-6);
+  margin-bottom: var(--sp-5);
+  border-radius: var(--radius-lg);
+  background: var(--bg-elevated);
+  border: 1px solid var(--border);
+  border-left: 5px solid var(--subject);
+}
+
+.detailInfo {
+  flex: 1;
+  min-width: 220px;
+}
+
+.detailTitle {
+  font-family: var(--font-display);
+  font-size: var(--fs-2xl);
+  font-weight: 600;
+  margin: 2px 0 var(--sp-3);
+}
+
+.detailMeta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--sp-2);
+}
+
+.detailActions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--sp-2);
+}
+
+.detailError {
+  display: grid;
+  gap: var(--sp-4);
+  justify-items: start;
+}
+
+.history {
+  margin-top: var(--sp-5);
+}
+
+.muted {
+  color: var(--text-muted);
+  font-size: var(--fs-sm);
+}
+
+.colorPicker {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--sp-2);
+  border: 0;
+  margin: 0;
+  padding: 0;
+}
+
+.colorPicker legend {
+  font-size: var(--fs-sm);
+  font-weight: 600;
+  margin-bottom: 6px;
+  padding: 0;
+}
+
+.swatch {
+  position: relative;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background: var(--swatch);
+  cursor: pointer;
+}
+
+.swatch input {
+  position: absolute;
+  inset: 0;
+  margin: 0;
+  opacity: 0;
+  cursor: pointer;
+}
+
+.swatch:has(input:checked) {
+  box-shadow:
+    0 0 0 3px var(--bg-elevated),
+    0 0 0 5px var(--swatch);
+}
+
+.swatch:has(input:focus-visible) {
+  outline: 2px solid var(--focus);
+  outline-offset: 5px;
+}
+
+@media (max-width: 860px) {
+  .columns {
+    grid-template-columns: minmax(0, 1fr);
+  }
+}
+
+@media (max-width: 560px) {
+  .totals {
+    grid-template-columns: 1fr;
+  }
+
+  .totals > div + div {
+    border-left: 0;
+    border-top: 1px solid var(--border);
+  }
+
+  .detailHero {
+    padding: var(--sp-5);
+  }
+
+  .detailTitle {
+    font-size: var(--fs-xl);
+  }
+}

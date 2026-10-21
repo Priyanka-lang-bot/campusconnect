@@ -1,0 +1,101 @@
+.skeleton {
+  display: block;
+  border-radius: var(--radius-sm);
+  background: linear-gradient(90deg, var(--bg-subtle) 0%, var(--border) 50%, var(--bg-subtle) 100%);
+  background-size: 200% 100%;
+  animation: shimmer 1.4s ease-in-out infinite;
+}
+
+@keyframes shimmer {
+  from {
+    background-position: 100% 0;
+  }
+  to {
+    background-position: -100% 0;
+  }
+}
+
+.pageSkeleton {
+  display: grid;
+  gap: var(--sp-4);
+}
+
+.skeletonGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: var(--sp-4);
+}
+
+.list {
+  display: grid;
+  gap: var(--sp-2);
+}
+
+.empty {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: var(--sp-2);
+  padding: var(--sp-10) var(--sp-4);
+}
+
+.emptyArt {
+  position: relative;
+  margin-bottom: var(--sp-2);
+}
+
+.artBack {
+  fill: var(--accent-2-soft);
+}
+
+.artFront {
+  fill: var(--accent-softer);
+  stroke: var(--border-strong);
+  stroke-dasharray: 4 4;
+}
+
+.artDot {
+  fill: var(--accent-2);
+  opacity: 0.5;
+}
+
+.emptyIcon {
+  position: absolute;
+  left: 52px;
+  top: 36px;
+  transform: translate(-50%, -50%);
+  color: var(--accent);
+}
+
+.emptyTitle {
+  font-size: var(--fs-md);
+  font-weight: 600;
+}
+
+.emptyMessage {
+  max-width: 42ch;
+  color: var(--text-muted);
+  font-size: var(--fs-sm);
+  margin-bottom: var(--sp-2);
+}
+
+.error {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: var(--sp-4);
+  padding: var(--sp-5);
+  border-radius: var(--radius-lg);
+  border: 1px solid color-mix(in srgb, var(--danger) 30%, transparent);
+  background: var(--danger-soft);
+}
+
+.error > div {
+  flex: 1;
+  min-width: 200px;
+}
+
+.errorIcon {
+  color: var(--danger);
+}
